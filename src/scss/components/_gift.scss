@@ -1,0 +1,143 @@
+.gift {
+
+  > .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &,
+  &-main,
+  &-body,
+  &-tabs,
+  &-tab,
+  &-footer > .container {
+    display: flex;
+  }
+
+  &,
+  &-main {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &-main {
+    justify-content: center;
+    gap: .75rem;
+    margin-block: 1.25rem;
+  }
+
+  &-body {
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--theme-gray-100);
+    border-radius: 1.125rem;
+    padding: .75rem;
+  }
+
+  &-tab {
+    flex: 1;
+    gap: .25rem;
+    margin: .125rem;
+
+    + .gift-tab {
+      align-items: center;
+
+      &::before {
+        content: '';
+        width: .0625rem;
+        height: .75rem;
+        display: block;
+        background-color: var(--gray);
+      }
+    }
+
+    .btn {
+      flex: 1;
+    }
+  }
+
+  &-spin {
+    width: 100%;
+    mask-image: radial-gradient(50% 150% at 50% 50%, #000 50%, rgba(102,102,102,0) 100%);
+    position: relative;
+    overflow: hidden;
+
+    &-container {
+      display: flex;
+    }
+
+    &-decoration {
+      pointer-events: none;
+      user-select: none;
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+
+      .icon {
+        --_color: var(--theme-gray-100);
+
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &:first-child {
+          top: -.375rem;
+          transform: translateX(-50%) rotate(180deg);
+        }
+
+        &:last-child {
+          bottom: -.375rem;
+        }
+      }
+    }
+
+    &-item {
+      flex-shrink: 0;
+
+      &:not(:last-child) {
+        padding-right: .75rem;
+      }
+    }
+  }
+
+  &-price {
+    display: flex;
+    flex-direction: column;
+    gap: .125rem;
+
+    &-text {
+      font-family: var(--font-second);
+      font-size: var(--fs-base);
+      font-weight: 400;
+      color: var(--theme-title-color);
+    }
+
+    &-value {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+
+      .icon-image {
+        width: 1.0625rem;
+        height: 1.0625rem;
+      }
+    }
+  }
+
+  &-footer {
+    border-top: .33px solid rgba(60, 60, 67, 0.36);
+    background-color: var(--theme-light-200);
+    backdrop-filter: blur(3.125rem);
+    padding-block: .5rem 2rem;
+
+    > .container {
+      display: flex;
+      gap: .75rem;
+
+      > .btn {
+        flex: 1;
+      }
+    }
+  }
+}

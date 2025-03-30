@@ -1,0 +1,72 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "SFProRounded", sans-serif;
+  --font-second: "SFProDisplay", sans-serif;
+  --font-third: "SFProText", sans-serif;
+  --content-width: 768px;
+  --container-offset: 1rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // sizes
+  --fs-base: 1rem;
+  --fw-base: 400;
+  --lh-base: normal;
+
+  // colors
+  --title-color: #2a2a2a;
+  --text-color: #000;
+  --primary: #007AFF;
+  --dark-rgb: 0, 0, 0;
+  --dark-300-rgb: 60, 60, 67;
+  --light: #fff;
+  --light-200: #f5f5f5;
+  --gray: #8E8E93;
+  --gray-100: #efeef3;
+  --gray-500-rgb: 120, 120, 128;
+  --gold: #D3720B;
+  --gold-100: #FFF4D8;
+
+  // colors theme
+  --theme-title-color: var(--title-color);
+  --theme-text-color: var(--text-color);
+  --theme-dark-rgb: 0, 0, 0;
+  --theme-light: var(--light);
+  --theme-light-v2: var(--light);
+  --theme-light-v3: var(--light);
+  --theme-light-200: var(--light-200);
+  --theme-gray: var(--gray);
+  --theme-gray-100: var(--gray-100);
+  --theme-gold: var(--gold);
+  --theme-gold-100: var(--gold-100);
+
+  // backgrounds
+  --body-bg: var(--light);
+
+  // shadows
+  --shadow: 0px 0px .625rem .125rem rgba(0,0,0,0.375);
+  --shadow-sm: 0px 0px .625rem .125rem rgba(0,0,0,0.25);
+
+  // transitions
+  --transition-duration: 300ms;
+  --transition-timing-function: ease-in-out;
+}
+
+.dark-theme {
+
+  &:root,
+  :root {
+    --theme-title-color: #efeff3;
+    --theme-text-color: #fff;
+    --theme-dark-rgb: 255, 255, 255;
+    --theme-light: #000;
+    --theme-light-v2: #222;
+    --theme-light-v3: #1C1C1E;
+    --theme-light-200: #1C1C1E;
+    --theme-gray: #3E3E41;
+    --theme-gray-100: #101010;
+    --theme-gold: #FEC435;
+    --theme-gold-100: #322C1E;
+  }
+}

@@ -1,0 +1,159 @@
+.btn {
+	--_width: initial;
+	--_height: initial;
+	--_fs: var(--fs-base);
+	--_fw: 600;
+	--_lh: normal;
+	--_ls: normal;
+	--_color: var(--theme-text-color);
+	--_bg: transparent;
+	--_border-width: 0;
+	--_border-style: solid;
+	--_border-color: transparent;
+	--_rounded: 0;
+	--_padding: 0;
+  --_shadow: none;
+	--_transform: translateZ(0);
+	--_transition-duration: var(--transition-duration);
+	--_transition-timing-function: var(--transition-timing-function);
+
+	--_color-hover: var(--primary);
+	--_bg-hover: transparent;
+	--_border-color-hover: transparent;
+  --_shadow-hover: none;
+	--_transform-hover: translateZ(0);
+
+	--_color-active: var(--primary);
+	--_bg-active: transparent;
+	--_border-color-active: transparent;
+  --_shadow-active: none;
+	--_transform-active: initial;
+
+	--_icon-size: 1rem;
+	--_icon-color: currentColor;
+
+	width: var(--_width);
+	height: var(--_height);
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: .25rem;
+
+  font-family: var(--font-third);
+	font-size: var(--_fs);
+	font-weight: var(--_fw);
+	line-height: var(--_lh);
+	letter-spacing: var(--_ls);
+	color: var(--_color);
+  text-align: center;
+	cursor: pointer;
+	background-color: var(--_bg);
+	border: var(--_border-width) var(--_border-style) var(--_border-color);
+	border-radius: var(--_rounded);
+	padding: var(--_padding);
+  box-shadow: var(--_shadow);
+	outline: none;
+	transform: var(--_transform);
+	transition-property: color, text-shadow, background, border, transform, opacity;
+	transition-duration: var(--_transition-duration);
+	transition-timing-function: var(--_transition-timing-function);
+
+	@media (hover: hover) {
+		&:is(:hover, :focus-visible) {
+			color: var(--_color-hover);
+			background-color: var(--_bg-hover);
+			border-color: var(--_border-color-hover);
+      box-shadow: var(--_shadow-hover);
+			transform: var(--_transform-hover);
+		}
+	}
+
+	&:is(:active, .is-active) {
+		color: var(--_color-active);
+		background-color: var(--_bg-active);
+		border-color: var(--_border-color-active);
+    box-shadow: var(--_shadow-active);
+		transform: var(--_transform-active);
+	}
+
+  &:disabled {
+    opacity: .5;
+  }
+
+	.icon {
+		--_size: var(--_icon-size);
+		--_color: var(--_icon-color);
+	}
+}
+
+.btn-primary {
+  --_color: var(--light);
+  --_bg: var(--primary);
+
+  --_color-hover: var(--light);
+  --_bg-hover: var(--primary);
+
+  --_color-active: var(--light);
+  --_bg-active: var(--primary);
+}
+
+.btn-transparent {
+  --_color: var(--theme-gray);
+	--_border-width: .5px;
+	--_border-color: transparent;
+
+  --_color-hover: var(--theme-gold);
+  --_bg-hover: var(--theme-light-v2);
+  --_border-color-hover: rgba(var(--theme-dark-rgb), 0.04);
+  --_shadow-hover: 0px .25rem .5rem 0px rgba(0, 0, 0, .12), 0px .25rem .125rem 0px rgba(0, 0, 0, .04);
+
+  --_color-active: var(--theme-gold);
+  --_bg-active: var(--theme-light-v2);
+  --_border-color-hover: rgba(var(--theme-dark-rgb), 0.04);
+  --_shadow-active: 0px .25rem .5rem 0px rgba(0, 0, 0, .12), 0px .25rem .125rem 0px rgba(0, 0, 0, .04);
+
+  .icon-image {
+    opacity: 0;
+    margin-left: calc(var(--_icon-size) * -1);
+    transition-property: opacity, margin;
+    transition-duration: var(--_transition-duration);
+    transition-timing-function: var(--_transition-timing-function);
+  }
+
+  @media (hover: hover) {
+
+    &:is(:hover, :focus-visible) {
+      .icon-image {
+        opacity: 1;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &:is(:active, .is-active) {
+
+    .icon-image {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+}
+
+.btn-md {
+	--_height: 1.5rem;
+	--_fs: .8125rem;
+	--_rounded: .5rem;
+	--_padding: .125rem .625rem;
+
+  gap: .125rem;
+}
+
+.btn-base {
+	--_height: 3.125rem;
+	--_fs: 1.0625rem;
+	--_rounded: .75rem;
+	--_padding: .625rem;
+
+  --_icon-size: var(--_fs);
+}

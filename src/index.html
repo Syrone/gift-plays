@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru" class="page dark-theme">
+
+@include('partials/head.html', {title: 'Главная страница'})
+
+<script>
+  window.costSpin = {
+    0: {
+      cost: 25
+    },
+    1: {
+      cost: 50
+    },
+    2: {
+      cost: 100
+    },
+  }
+
+  window.cardsObject = {
+    0: {
+      limited: false,
+      image: 'gift-0',
+      cost: 15
+    },
+    1: {
+      limited: false,
+      image: 'gift-1',
+      cost: 15
+    },
+    2: {
+      limited: false,
+      image: 'gift-2',
+      cost: 25
+    },
+    3: {
+      limited: false,
+      image: 'gift-3',
+      cost: 25
+    },
+    4: {
+      limited: false,
+      image: 'gift-4',
+      cost: 50
+    },
+    5: {
+      limited: false,
+      image: 'gift-5',
+      cost: 50
+    },
+    6: {
+      limited: false,
+      image: 'gift-6',
+      cost: 50
+    },
+    7: {
+      limited: false,
+      image: 'gift-7',
+      cost: 50
+    },
+    8: {
+      limited: false,
+      image: 'gift-8',
+      cost: 100
+    },
+    9: {
+      limited: false,
+      image: 'gift-9',
+      cost: 100
+    },
+    10: {
+      limited: false,
+      image: 'gift-10',
+      cost: 100
+    },
+    11: {
+      limited: true,
+      image: 'gift-11',
+      cost: 350
+    },
+    12: {
+      limited: true,
+      image: 'gift-12',
+      cost: 500
+    },
+  }
+</script>
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Главная страница'})
+
+  <div class="site-container">
+    <main class="main">
+      <div class="gift">
+        <div class="container">
+          <div class="gift-main">
+            <div class="gift-body">
+              <ul class="list-reset gift-tabs"></ul>
+
+              <div class="gift-spin">
+                <div class="gift-spin-decoration">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/triangle.svg#svg-triangle"></use>
+                    </svg>
+                  </span>
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/triangle.svg#svg-triangle"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="gift-spin-container"></div>
+              </div>
+            </div>
+
+            <div class="gift-price">
+              <p class="gift-price-text">
+                Balance
+              </p>
+              <div class="gift-price-value">
+                <img loading="lazy" src="./img/star.svg" class="icon-image" width="17" height="17" alt="Star">
+                1500
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gift-footer">
+          <div class="container">
+            <button type="button" class="btn btn-base btn-primary gift-play">
+              <span>
+                Play <span class="gift-play-cost"></span>
+              </span>
+
+              <span class="icon">
+                <svg>
+                  <use xlink:href="img/icons/star.svg#svg-star"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
