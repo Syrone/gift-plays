@@ -22,7 +22,7 @@ document.querySelectorAll('.gift')?.forEach((container) => {
     const limitedHtml = cardData.limited ? `
       <div class="card-status">
         <img loading="lazy" src="./img/cards/card-decoration.svg" class="card-status-decoration" width="50" height="50" alt="Decoration">
-        <span class="card-status-value">Limited</span>
+        <span class="card-status-value" data-i18next="text_card_status"></span>
       </div>
     ` : ''
 
@@ -113,5 +113,5 @@ document.querySelectorAll('.gift')?.forEach((container) => {
     }
   })
 
-  buttonPlay.addEventListener('click', () => spinReel(4))
+  buttonPlay.addEventListener('click', () => spinReel(12))
 })

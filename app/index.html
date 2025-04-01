@@ -10,7 +10,7 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
 
-  <title>Главная страница</title>
+  <title data-i18next="text_title_page"></title>
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="preload" href="fonts/SF-Pro-Display-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -109,9 +109,7 @@
 </script>
 
 <body class="page-body">
-  <h1 class="visually-hidden">
-    Главная страница
-</h1>
+  <h1 class="visually-hidden" data-i18next="text_h1_page"></h1>
 
   <div class="site-container">
     <main class="main">
@@ -139,9 +137,7 @@
             </div>
 
             <div class="gift-price">
-              <p class="gift-price-text">
-                Balance
-              </p>
+              <p class="gift-price-text" data-i18next="text_account_balance"></p>
               <div class="gift-price-value">
                 <img loading="lazy" src="./img/star.svg" class="icon-image" width="17" height="17" alt="Star">
                 1500
@@ -153,7 +149,7 @@
           <div class="container">
             <button type="button" class="btn btn-base btn-primary gift-play">
               <span>
-                Play <span class="gift-play-cost"></span>
+                <span data-i18next="text_button_play"></span> <span class="gift-play-cost"></span>
               </span>
 
               <span class="icon">

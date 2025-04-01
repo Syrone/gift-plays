@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
-@include('partials/head.html', {title: 'Главная страница'})
+@include('partials/head.html')
 
 <script>
   window.costSpin = {
@@ -86,7 +86,7 @@
 </script>
 
 <body class="page-body">
-  @include('partials/h1.html', {title: 'Главная страница'})
+  @include('partials/h1.html')
 
   <div class="site-container">
     <main class="main">
@@ -114,9 +114,7 @@
             </div>
 
             <div class="gift-price">
-              <p class="gift-price-text">
-                Balance
-              </p>
+              <p class="gift-price-text" data-i18next="text_account_balance"></p>
               <div class="gift-price-value">
                 <img loading="lazy" src="./img/star.svg" class="icon-image" width="17" height="17" alt="Star">
                 1500
@@ -128,7 +126,7 @@
           <div class="container">
             <button type="button" class="btn btn-base btn-primary gift-play">
               <span>
-                Play <span class="gift-play-cost"></span>
+                <span data-i18next="text_button_play"></span> <span class="gift-play-cost"></span>
               </span>
 
               <span class="icon">
